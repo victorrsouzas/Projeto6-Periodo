@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import {Route, BrowserRouter, Routes} from 'react-router-dom';
+import { styled } from '@mui/system';
+import { CssBaseline, ThemeProvider} from '@mui/material';
+import Login from './auth/index'
 import './App.css';
 
 function App() {
+  const [user, setUser] = React.useState('');
+  const [toggleForm, setToggleForm] =  React.useState(true);
+  const formMode = () => {
+    setToggleForm(!toggleForm);
+  }
+  const userState = () => {
+    const data = localStorage.getItem('user');
+    const us = data !== null ? JSON.parse(data) : null;
+    setUser(us);
+  }
+
+  React.useEffect(() => {
+    userState();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {user !== null ? (
+        <>
+        <p>Teste</p>
+        </>
+      ) : (
+         <>
+         {toggleForm ? (<Login loggedIn={(user) => setUser(user)} toggle={() => formMode()}/>) 
+         : ""}
+     </>
+      )} 
+    </>
   );
 }
 
