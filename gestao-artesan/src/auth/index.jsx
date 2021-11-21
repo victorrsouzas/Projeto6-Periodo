@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {
-    Container, CssBaseline, Box, CircularProgress, Button, Card, CardContent
+    Container, Grid,CssBaseline, Box, CircularProgress, Button, Card, CardContent
 } from '@mui/material';
 import fire from '../helpers';
 import { ToastContainer, toast } from 'react-toastify';
-import Logo from '../asserts/logo (2).png';
+import Logo from '../asserts/Group 196.png';
 import { Form, Formik } from 'formik';
 import * as Yup from "yup";
 import Error from '../helpers/error';
@@ -43,10 +43,11 @@ function Login(props) {
 
     async function handleSubmit(values, { resetForm }) {
         console.log(values.email, values.password)
-        setLoading(true);
+
         fire.auth()
             .signInWithEmailAndPassword(values.email, values.password)
             .then(response => {
+                setLoading(true);
                 const { user } = response;
                 const data = {
                     userId: user.uid,
@@ -60,12 +61,12 @@ function Login(props) {
                 setLoading(false);
                 resetForm();
             }).catch(error => {
+                toast.error(error.message);
                 setLoading(false);
                 setErrorMessage(error);
                 setError(true);
                 setLoading(false);
-            });
-
+            })
     }
     function handleClose() {
         setError(false);
@@ -93,11 +94,25 @@ function Login(props) {
                                 initialValues={initialValues}
                                 validationSchema={validations}
                                 onSubmit={handleSubmit}
+                                onError={errors => {
+                                    for (const err of errors) {
+                                        console.log(err.props.errorMessages[0])
+                                    }
+                                }}
                             >
                                 {({ resetForm, values, isValid, handleReset, handleBlur, setFieldValue }) => (
                                     <Form>
-
-                                        <img src={Logo} alt={"Casual Jacket"} />
+                                        <br /><br /><br />
+                                        <Grid
+                                            container
+                                            direction="row"
+                                            justifyContent="center"
+                                            alignItems="center"
+                                        >
+                                            <img src={Logo} alt={"Casual Jacket"} />
+                                        </Grid>
+                                        
+                                        <br /><br /><br />
                                         <FormTextField
                                             name="email"
                                             label="Email"
