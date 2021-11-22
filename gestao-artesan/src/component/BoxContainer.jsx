@@ -9,7 +9,6 @@ function BoxContainer({title, align, children}) {
       title={
         <Typography  variant="h7" color="secondary" fontWeight="500" textAlign={align}>{title}</Typography>
         } />
-      
       <CardContent>
         {children}
       </CardContent>
