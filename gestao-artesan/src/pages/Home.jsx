@@ -15,16 +15,16 @@ import Graph3 from '../component/pie2'
 
 const columns = [
   {
-    field: 'pedido', headerName: '# pedido', width: 150, type: 'string',
+    field: 'pedido', headerName: '# pedido', width: 80, type: 'string',
   },
   {
-    field: 'Fornecedor', width: 250, type: 'string'
+    field: 'Fornecedor', width: 150, type: 'string'
   },
   {
-    field: "Entrega", headerName: 'Entrega', width: 250, type: 'date'
+    field: "Entrega", headerName: 'Entrega', width: 150, type: 'date'
   },
   {
-    field: 'Status', headerName: "Status", width: 250, type: 'string', flex: 0.3
+    field: 'Status', headerName: "Status", width: 350, type: 'string', flex: 0.3
   },
 
 ];
@@ -32,7 +32,7 @@ const columns = [
 const initialRows = [
   { id: 1, pedido: 24451, Fornecedor: "Turiarte", Entrega: "16/05/2021", Status: "Concluido" },
   { id: 2, pedido: 24431, Fornecedor: "Monte Siao", Entrega: "07/07/2021", Status: "Pendente" },
-  { id: 3, pedido: 24211, Fornecedor: "Família Zezinho Tracunhaém", Entrega: "25/07/2021", Status: "Atrasado" },
+  { id: 3, pedido: 24211, Fornecedor: "Família Zezinho", Entrega: "25/07/2021", Status: "Atrasado" },
   { id: 4, pedido: 24451, Fornecedor: "Renda Filé", Entrega: "25/05/2021", Status: "Atrasado" },
   { id: 5, pedido: 24671, Fornecedor: "NACIB", Entrega: "22/06/2021", Status: "Concluido" },
   { id: 6, pedido: 24671, Fornecedor: "Luis Gravata", Entrega: "12/08/2021", Status: "Concluido" },

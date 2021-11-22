@@ -27,7 +27,7 @@ const data = [
 
   },
   {
-    name: 'Familia Zezinho Tracunhaém',
+    name: 'F.Zezinho',
 
     pv: 298,
 
