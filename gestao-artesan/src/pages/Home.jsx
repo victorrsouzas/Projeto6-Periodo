@@ -49,7 +49,14 @@ function Home() {
           direction="column"
         >
           <Grid item xs={4}>
+            <BoxContainer title="Resumo dos Pedidos" style={{ display: 'flex' }}>
+              <ListTable columns={columns} initialRows={initialRows} />
+
+            </BoxContainer>
+          </Grid>
+          <Grid item xs={4}>
             <BoxContainer title="Resumo Geral dos Pedidos" style={{ display: 'flex' }}>
+
               <Graph1 />
             </BoxContainer>
           </Grid>
@@ -59,11 +66,6 @@ function Home() {
                 Fornecedor: Turiarte
               </Typography>
               <Graph2 />
-            </BoxContainer>
-          </Grid>
-          <Grid item xs={4}>
-            <BoxContainer title="Top Fornecedores" style={{ display: 'flex' }}>
-              <Graph3 />
             </BoxContainer>
           </Grid>
         </Grid>
@@ -88,8 +90,8 @@ function Home() {
 
           </Grid>
           <Grid item xs={6}>
-            <BoxContainer title="Resumo dos Pedidos" style={{ display: 'flex' }}>
-              <ListTable columns={columns} initialRows={initialRows} />
+            <BoxContainer title="Top Fornecedores" style={{ display: 'flex' }}>
+              <Graph3 />
             </BoxContainer>
           </Grid>
         </Grid>
