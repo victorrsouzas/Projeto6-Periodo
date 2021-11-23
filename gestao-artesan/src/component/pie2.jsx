@@ -2,14 +2,13 @@ import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer,
   ComposedChart,
-  Line,
-  Area,
+
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
+
   Label
 } from 'recharts';
 
@@ -68,7 +67,7 @@ export default class Example extends PureComponent {
             <XAxis dataKey="name" scale="band" >
               <Label value="Fornecedores" offset={0} position="bottom" />
             </XAxis>
-            <YAxis label={{ value: 'Em R$', angle: -90, position: 'insideLeft' }}/>
+            <YAxis label={{ value: 'Em R$', angle: -90, position: 'insideLeft' }} />
             <Tooltip />
             <Bar dataKey="pv" barSize={20} fill="#7B442A" />
           </ComposedChart>

@@ -4,44 +4,44 @@ import { Typography } from "@mui/material"
 const data = [
   {
     name: 'Jun',
-    Sim: 4000,
-    Nao: 2400,
+    Estoque: 4000,
+    Atrasados: 2400,
     amt: 2400,
   },
   {
     name: 'Jul',
-    Sim: 3000,
-    Nao: 1398,
+    Estoque: 3000,
+    Atrasados: 1398,
     amt: 2210,
   },
   {
     name: 'Ago',
-    Sim: 2000,
-    Nao: 9800,
+    Estoque: 2000,
+    Atrasados: 9800,
     amt: 2290,
   },
   {
     name: 'Set',
-    Sim: 2780,
-    Nao: 3908,
+    Estoque: 2780,
+    Atrasados: 3908,
     amt: 2000,
   },
   {
     name: 'Out',
-    Sim: 1890,
-    Nao: 4800,
+    Estoque: 1890,
+    Atrasados: 4800,
     amt: 2181,
   },
   {
     name: 'Nov',
-    Sim: 2390,
-    Nao: 3800,
+    Estoque: 2390,
+    Atrasados: 3800,
     amt: 2500,
   },
   {
     name: 'Dez',
-    Sim: 3490,
-    Nao: 4300,
+    Estoque: 3490,
+    Atrasados: 4300,
     amt: 2100,
   },
 ];
@@ -51,8 +51,8 @@ export default class Example extends PureComponent {
 
   state = {
     opacity: {
-      Sim: 1,
-      Nao: 1,
+      Estoque: 1,
+      Atrasados: 1,
     },
   };
 
@@ -96,8 +96,8 @@ export default class Example extends PureComponent {
             <YAxis label={{ value: 'Em R$', angle: -90, position: 'insideLeft' }}/>
             <Tooltip />
             <Legend onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} />
-            <Line type="monotone" dataKey="Nao" strokeOpacity={opacity.Nao} stroke="#d88484" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="Sim" strokeOpacity={opacity.Sim} stroke="#82ca9d" />
+            <Line type="monotone" dataKey="Atrasados" strokeOpacity={opacity.Atrasados} stroke="#d88484" activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="Estoque" strokeOpacity={opacity.Estoque} stroke="#82ca9d" />
           </LineChart>
         </ResponsiveContainer>
         <Typography fontWeight="500" color="#7B442A" >

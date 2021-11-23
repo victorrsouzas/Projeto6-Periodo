@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
-import { Typography } from '@mui/material';
+
 
 const data = [
-  { name: 'Sim', value: 510 },
-  { name: 'Não', value: 490 },
+  { name: 'Estoque', value: 8 },
+  { name: 'Atrasadas', value: 2 },
   
 ];
 

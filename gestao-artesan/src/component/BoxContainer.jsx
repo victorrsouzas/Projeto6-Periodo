@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Divider, Typography } from '@mui/material'
+import { Card, CardContent, CardHeader, Typography } from '@mui/material'
 import React from 'react'
 
 function BoxContainer({title, align, children}) {

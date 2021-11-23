@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import BoxContainer from '../component/BoxContainer';
 import CalendarPicker from '@mui/lab/CalendarPicker';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -61,7 +61,7 @@ function Home() {
             </BoxContainer>
           </Grid>
           <Grid item xs={4}>
-            <BoxContainer title="Reposição de Fornecedor" style={{ display: 'flex' }}>
+            <BoxContainer title="Reposição de Mercadorias" style={{ display: 'flex' }}>
               <Typography fontWeight="500" color="#7B442A" >
                 Fornecedor: Turiarte
               </Typography>

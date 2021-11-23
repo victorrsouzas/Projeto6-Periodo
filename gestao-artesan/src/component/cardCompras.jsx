@@ -1,13 +1,11 @@
-import { useTheme } from "@emotion/react";
 import { Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import Avatar from '@mui/material/Avatar';
 
-import { green, pink, deepOrange } from '@mui/material/colors';
+import { deepOrange } from '@mui/material/colors';
 
 function CardCompras({ name, title, icon, ...props }) {
-    const theme = useTheme();
     return (
         <Box
             sx={{

@@ -35,14 +35,13 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 //Icons
 import {
   MenuRounded,
-  FaceRounded,
+  
   ExpandLessRounded,
   ExpandMoreRounded,
-  HomeRounded,
-  ListAltRounded,
+  
+  
   ArrowRightRounded,
-  ManageSearchRounded,
-  SettingsRounded,
+  
 } from "@mui/icons-material";
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
@@ -199,10 +198,10 @@ const Footer = styled("div")({
 export default function PageWrapper({ children, ...props }) {
   // const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [auth, setAuth] = React.useState(true);
+  const [auth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open2 = Boolean(anchorEl);
-  const [open3, setOpen3] = React.useState(true);
+  const [open3] = React.useState(true);
 
   const handleClose = () => {
     localStorage.removeItem('user');
